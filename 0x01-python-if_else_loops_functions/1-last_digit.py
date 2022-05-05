@@ -7,7 +7,7 @@ less = "is less than 6 and not 0"
 greater = "is greater than 5"
 
 if number >= 0:
-        last_digit = number % 10
+    last_digit = number % 10
 else:
     last_digit = number % -10
 if last_digit < 6 and last_digit != 0:
