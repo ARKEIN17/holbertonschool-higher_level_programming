@@ -6,4 +6,4 @@ for i in range(0, 10):
             print(f"{i}{j}", end="")
             if i != 8:
                 print(", ", end="")
-                print()
+print()
