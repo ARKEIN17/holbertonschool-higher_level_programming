@@ -3,10 +3,6 @@
 '''Init of the program'''
 
 
-from ast import If
-from typing import Sized
-
-
 class Square:
     '''Definitios'''
     def __init__(self, size=0):
