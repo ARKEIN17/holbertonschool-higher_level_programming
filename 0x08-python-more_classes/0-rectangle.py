@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-""" A rectangle. """
+"""Create a empty class"""
 
 
-class Rectangle:
-    """ Rectangle functions and data """
-
+class Rectangle():
+    """empty class"""
     pass
