@@ -1,4 +1,4 @@
- doctest_in_3-say_my_name.txt
+doctest_in_3-say_my_name.txt
 ==============================
 
 import of the module to be tested:
@@ -32,4 +32,4 @@ Test_5: none name:
 
 Test_6: only first name:
     >>> say_my_name("Pablo")
-    My name is Pablo
+    My name is Pablo 
