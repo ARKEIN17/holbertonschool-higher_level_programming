@@ -2,7 +2,7 @@
 """def a funtion that read a text """
 
 
-def number_of_lines(filename=""):
+def write_file(filename="", text=""):
     """function that reads a text and return number of lines"""
 
     lines = 0
