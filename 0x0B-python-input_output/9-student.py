@@ -9,6 +9,8 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+        """ definitions"""
 
     def to_json(self):
+        """ return """
         return self.__dict__
