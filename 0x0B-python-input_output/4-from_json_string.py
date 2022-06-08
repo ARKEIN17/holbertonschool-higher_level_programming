@@ -3,9 +3,6 @@
 import json
 
 
-""" funtion return a str"""
 def from_json_string(my_str):
-    """ definition """
-    represent = json.loads(my_str)
-    """ return """
-    return represent
+    """ funtion return a str"""
+    return json.loads(my_str)
