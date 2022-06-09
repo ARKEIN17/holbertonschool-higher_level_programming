@@ -2,11 +2,10 @@
 """class pascal`s triangle"""
 
 
-def PascalTriangle(n):
-   trow = 1
-   y = 0
-   """Inside the for loop we will print the list initialized by trow variable"""
-   for x in range(n):
-      print(trow)
-      trow = [left + right for left, right in zip(trow + y, y + trow)]
-   return n >= 0
+def pascal_triangle(n):
+    fila = []
+    cero = []
+
+    for i in range(n):
+        print(n)
+        n = [i + d for i, d in zip(n + cero, cero + n)]
