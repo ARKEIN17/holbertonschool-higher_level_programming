@@ -3,10 +3,10 @@
 
 
 def pascal_triangle(n):
-    fila = []
-    cero = []
+    fila = [1]
+    cero = [0]
 
     for i in range(n):
         """print"""
-        print(n)
-        n = [i + d for i, d in zip(n + cero, cero + n)]
+        n = [i + d for i, d in zip(fila + cero, cero + fila)]
+        
