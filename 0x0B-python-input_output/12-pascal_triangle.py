@@ -7,5 +7,6 @@ def pascal_triangle(n):
     cero = []
 
     for i in range(n):
+        """print"""
         print(n)
         n = [i + d for i, d in zip(n + cero, cero + n)]
