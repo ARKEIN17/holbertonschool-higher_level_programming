@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" pascal triange """
+""" make pascal triangle """
 
 
 def pascal_triangle(n):
-    """return a pascal triangle"""
+    """definition a pascal triangle"""
     pasc_list = []
 
     for i in range(n):
@@ -11,8 +11,6 @@ def pascal_triangle(n):
         pasc_list[i].append(1)
         for j in range(1, i):
             pasc_list[i].append(pasc_list[i - 1][j - 1] + pasc_list[i - 1][j])
-        """ conditional """
-        if (n != 0):
+        if (i != 0):
             pasc_list[i].append(1)
-    """ return """
     return pasc_list
