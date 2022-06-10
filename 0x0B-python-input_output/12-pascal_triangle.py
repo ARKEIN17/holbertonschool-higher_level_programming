@@ -11,7 +11,8 @@ def pascal_triangle(n):
         pasc_list[i].append(1)
         for j in range(1, i):
             pasc_list[i].append(pasc_list[i - 1][j - 1] + pasc_list[i - 1][j])
-            """conditional"""
+        """ conditional """
         if (n != 0):
             pasc_list[i].append(1)
+    """ return """
     return pasc_list
