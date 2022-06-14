@@ -20,7 +20,8 @@ class Rectangle(Base):
 @property
 def width(self):
     return self.__width
-
+"""Update the class Rectangle
+"""
 @width.setter
 def width(self, value):
     if type(value) != int:
