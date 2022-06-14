@@ -14,3 +14,17 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+"""taks 3"""
+
+@property
+def width(self):
+    return self.__width
+
+@width.setter
+def width(self, value):
+    if type(value) != int:
+        raise TypeError("width must be an integer")
+    if value <= 0:
+        raise ValueError("width must be > 0")
+    self.__width = value
