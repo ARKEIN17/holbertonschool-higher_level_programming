@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-"""new class base"""
+"""base
+"""
+import json
+import csv
 
 
 class Base:
-    "class base"
+    """class base
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        "class def"
         if id is not None:
             self.id = id
         else:
-            Base.__nb__objects += 1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
