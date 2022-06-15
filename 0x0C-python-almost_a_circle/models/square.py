@@ -36,3 +36,15 @@ class Square(Rectangle):
             self.x = x
         if y is not None:
             self.y = y
+
+def update(self, *args, **kwargs):
+        '''Actualiza los atributos.'''
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+def to_dictionary(self):
+        '''Returns'''
+        return {"id": self.id, "size": self.width,
+                "x": self.x, "y": self.y}
