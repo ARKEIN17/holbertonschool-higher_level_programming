@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-    Class Rectangle that inherits from Base
+   Module for Rectangle class.
 """
 from models.base import Base
 
 
 class Rectangle(Base):
     """
-        Class methods
+        Constructor
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor Method"""
@@ -19,7 +19,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getter method of width"""
+        """Width of this rectangle."""
         return self.__width
 
     @width.setter
