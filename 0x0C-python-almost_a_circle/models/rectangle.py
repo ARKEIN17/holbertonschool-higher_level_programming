@@ -16,19 +16,14 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-"""taks 3"""
-
-@property
-def width(self):
-    """width of rectangle"""
-    return self.__width
-    
-"""Update the class Rectangle
-"""
-@width.setter
-def width(self, value):
-    if type(value) != int:
-        raise TypeError("width must be an integer")
-    if value <= 0:
-        raise ValueError("width must be > 0")
-    self.__width = value
+    @property
+    def width(self):
+        '''Width of this rectangle.'''
+        return self.__width
+    @width.setter
+    def width(self, value):
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
