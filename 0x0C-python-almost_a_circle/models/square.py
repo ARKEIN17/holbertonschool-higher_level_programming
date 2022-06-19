@@ -46,5 +46,5 @@ def update(self, *args, **kwargs):
 
 def to_dictionary(self):
         '''Returns'''
-        return {"id": self.id, "size": self.width,
-                "x": self.x, "y": self.y}
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+
