@@ -1,50 +1,55 @@
 #!/usr/bin/python3
-'''Module for Square class.'''
+"""square
+"""
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    '''A Square class.'''
+    """Inherits from Rectangle
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        '''Constructor.'''
+        """Class constructor"""
+
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        '''Returns string info about this square.'''
-        return '[{}] ({}) {}/{} - {}'.\
-            format(type(self).__name__, self.id, self.x, self.y, self.width)
+        """Returns formatted information display
+        """
+
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
-        """Getter method for size"""
+        """Getter for size"""
+
         return self.width
 
     @size.setter
     def size(self, value):
-        """Setter method for size"""
+        """Setter for size"""
+
         self.width = value
         self.height = value
 
-    def __update(self, id=None, size=None, x=None, y=None):
-        '''Internal method that updates instance attributes via */**args.'''
-        if id is not None:
-            self.id = id
-        if size is not None:
-            self.size = size
-        if x is not None:
-            self.x = x
-        if y is not None:
-            self.y = y
+    def update(self, *args, **kwargs):
+        """Updates the values of the Rectangle instance"""
 
-def update(self, *args, **kwargs):
-        '''Actualiza los atributos.'''
-        if args:
-            self.__update(*args)
-        elif kwargs:
-            self.__update(**kwargs)
+        if len(args) == 0:
+            for llave in kwargs:
+                setattr(self, llave, kwargs[llave])
+        else:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.size = args[1]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 3:
+                self.y = args[3]
 
-def to_dictionary(self):
-        '''Returns'''
-        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
-
+    def to_dictionary(self):
+        """return format of a dictionary"""
+        return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
