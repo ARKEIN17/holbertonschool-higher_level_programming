@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def matrix_divided(matrix, div):
 
     if not isinstance(matrix, list):
