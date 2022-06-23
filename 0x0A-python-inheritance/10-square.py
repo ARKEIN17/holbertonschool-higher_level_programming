@@ -1,11 +1,6 @@
 #!/usr/bin/python3
-"""
-Contains the class MyInt
-"""
-
-
 Rectangle = __import__('9-rectangle').Rectangle
-""" module with class BaseGeometry """
+"""module with class BaseGeometry"""
 
 
 class Square(Rectangle):
