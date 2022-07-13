@@ -1,3 +1,3 @@
 -- Command that shows databases
-HOW DATABASES;
+SHOW DATABASES;
 
