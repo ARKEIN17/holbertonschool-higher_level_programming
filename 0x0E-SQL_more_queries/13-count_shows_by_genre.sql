@@ -1,0 +1,2 @@
+-- Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 12-no_genre.sql)
+SELECT g.name AS genre, COUNT(tg.genre_id) AS number_of_shows FROM tv_genres AS g JOIN tv_show_genres AS tg ON g.id=tg.genre_id GROUP BY tg.genre_id ORDER BY number_of_shows DESC;
