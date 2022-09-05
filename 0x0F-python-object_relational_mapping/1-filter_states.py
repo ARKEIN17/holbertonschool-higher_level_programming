@@ -13,7 +13,7 @@ if __name__ == "__main__":
     mycursor.execute("SELECT * FROM states ORDER BY id;")
     result = mycursor.fetchall()
     for result in result:
-            if result[1][0] == "N":
-                    print (result)
+        if result[1][0] == "N":
+            print(result)
     mycursor.close()
     database.close()
