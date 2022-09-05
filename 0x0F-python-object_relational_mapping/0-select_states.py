@@ -13,3 +13,5 @@ if __name__ == "__main__":
     result = mycursor.fetchall()
     for value in result:
         print(value)
+    mycursor.close()
+    database.close()
