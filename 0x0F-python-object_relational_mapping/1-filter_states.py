@@ -10,7 +10,8 @@ if __name__ == "__main__":
                                     passwd=argv[2], db=argv[3])
 
     mycursor = database.cursor()
-    mycursor.execute("SELECT * FROM states ORDER BY id;")
+    mycursor.execute("SELECT * FROM states \
+                        WHERE name LIKE BINARY 'N%' ORDER BY id;")
     result = mycursor.fetchall()
     for result in result:
         if result[1][0] == "N":
