@@ -4,16 +4,21 @@
 import sys
 from model_state import Base, State
 from model_city import City
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker
+
 from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
-    database = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(engine)
+    session = Session()
 
-    sesion = Session(database)
-    query = sesion.query(State, City).filter(
-        City.state_id == State.id).order_by(City.id).all()
-    for state_instance, city_instance in query:
-        print
-        (f"{state_instance.name}:({city_instance.id}){city_instance.name}")
+    elements_to_query = session.query(State.name, City.id, City.name).join(
+        City, State.id == City.state_id).order_by(City.id)
+
+    for element in elements_to_query:
+        print("{e[0]}: ({e[1]}) {e[2]}".format(e=element))
+
+    session.close()
