@@ -12,6 +12,8 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
     sesion = Session(database)
-    query = sesion.query(State, City).filter(City.state_id == State.id).order_by(City.id).all()
+    query = sesion.query(State, City).filter(
+        City.state_id == State.id).order_by(City.id).all()
     for state_instance, city_instance in query:
-        print(f"{state_instance.name}: ({city_instance.id}) {city_instance.name}")
+        print
+        (f"{state_instance.name}:({city_instance.id}){city_instance.name}")
