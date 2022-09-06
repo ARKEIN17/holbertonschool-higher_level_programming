@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """List Module"""
 
-from sqlite3 import Row
 import MySQLdb
 from sys import argv
 
